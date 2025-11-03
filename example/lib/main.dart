@@ -40,7 +40,6 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController longitudeController = new TextEditingController();
   TextEditingController radiusController = new TextEditingController();
   StreamSubscription<GeofenceStatus>? geofenceStatusStream;
-  Geolocator geolocator = Geolocator();
   String geofenceStatus = '';
   bool isReady = false;
   Position? position;
@@ -111,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                RaisedButton(
+                ElevatedButton(
                   child: Text("Start"),
                   onPressed: () {
                     print("starting geoFencing Service");
@@ -134,7 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   width: 10.0,
                 ),
-                RaisedButton(
+                ElevatedButton(
                   child: Text("Stop"),
                   onPressed: () {
                     print("stop");
